@@ -6,3 +6,8 @@ export interface UserInterface {
     gender: string;
     birth: string;
 }
+
+export interface Icredentials{
+    username: string,
+    password: string
+}

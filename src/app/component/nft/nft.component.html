@@ -1,1 +1,16 @@
-<p>nft works!</p>
+<h1 class="text-center m-5">Liste des Nfts</h1>
+
+<div class="card-group">
+
+    <div *ngFor="let nft of nftList">
+        <div class="card" style="width: 18rem;">
+            <img src="https://play-lh.googleusercontent.com/HZ16nsxrSsoJoZx0JDJjpmRN2KC0eZRSTyS2O-Lgjw7BgjTU6W8uDSYNj1IMlbqmtQ" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{nft.name}}</h5>
+              <p class="card-text">Prix : {{nft.price}} ETH</p>
+              <p class="card-text">{{nft.date}}</p>
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+    </div>
+</div>
