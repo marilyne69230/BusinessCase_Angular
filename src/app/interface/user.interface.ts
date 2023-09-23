@@ -11,3 +11,6 @@ export interface Icredentials{
     username: string,
     password: string
 }
+export interface Itoken{
+    token: string
+}

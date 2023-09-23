@@ -1,0 +1,121 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.hero {
+    width: 100%;
+    overflow: hidden;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+}
+
+@media (min-width: 640px) {
+    .gallery .item {
+        width: 33.333333%;
+        padding-top: 24%;
+   }
+}
+@media (min-width: 1200px) {
+    .gallery .item {
+        width: 25%;
+        padding-top: 17.5%;
+   }
+}
+.gallery .item img, .gallery .item p {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px;
+    padding: 10px;
+}
+.gallery.show {
+    opacity: 1;
+}
+.gallery.show .item.odd {
+    animation: slideup_s linear 20s 0s infinite;
+}
+@media (min-width: 640px) {
+    .gallery.show .item.odd {
+        animation: slideup_m linear 20s 0s infinite;
+   }
+}
+@media (min-width: 1200px) {
+    .gallery.show .item.odd {
+        animation: slideup linear 20s 0s infinite;
+   }
+}
+.gallery.show .item.even {
+    animation: slidedown_s linear 20s 0s infinite;
+}
+@media (min-width: 640px) {
+    .gallery.show .item.even {
+        animation: slidedown_m linear 20s 0s infinite;
+   }
+}
+@media (min-width: 1200px) {
+    .gallery.show .item.even {
+        animation: slidedown linear 20s 0s infinite;
+   }
+}
+@keyframes slideup_s {
+    0% {
+        transform: translate(0, 0);
+   }
+    100% {
+        transform: translate(0, -600%);
+   }
+}
+@keyframes slidedown_s {
+    0% {
+        transform: translate(0, -600%);
+   }
+    100% {
+        transform: translate(0, 0);
+   }
+}
+@keyframes slideup_m {
+    0% {
+        transform: translate(0, -400%);
+   }
+    100% {
+        transform: translate(0, 0);
+   }
+}
+@keyframes slidedown_m {
+    0% {
+        transform: translate(0, 0);
+   }
+    100% {
+        transform: translate(0, -400%);
+   }
+}
+@keyframes slideup {
+    0% {
+        transform: translate(0, -300%);
+   }
+    100% {
+        transform: translate(0, 0);
+   }
+}
+@keyframes slidedown {
+    0% {
+        transform: translate(0, 0);
+   }
+    100% {
+        transform: translate(0, -300%);
+   }
+}
+
+img {
+    border-radius: 50px;
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: white;
+}
+
+h2 {
+    color: yellow;
+    font-size: 50px;
+    text-decoration: underline yellow;
+}
+
+button {
+    background-color: yellow;
+    border: 3px solid;
+}
+
+#card {
+    background-color: grey;
+    border-radius: 0;
+}
+
+

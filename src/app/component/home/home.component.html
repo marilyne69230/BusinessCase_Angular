@@ -1,14 +1,17 @@
-<h1 class="text-center m-5">Découvrez et achetez des collections exceptionnelles</h1>
+<div class="container">
+  <div class="row">
 
+    <!-- COTE GAUCHE -->
+    <div class="col-7">
+      <app-accueil></app-accueil>
+    </div>
 
-<!-- BARRE DE RECHERCHE -->
-<div class="container d-flex justify-content-center">
+    <!-- COTE DROIT -->
+    <div class="col-5"> 
+      <app-scroll></app-scroll>
+    </div>
+  </div>
 
-    <nav class="navbar navbar-light bg-light col-6 justify-content-around">
-        <form class="form">
-          <input class="form-control " type="search" placeholder="Recherchez un nom de nft.." aria-label="Search">
-        </form>
-        <button class="btn btn-outline-success" type="submit">Recherche</button>
-      </nav>
+  <script src="../../../assets/script.js"></script>
 </div>
-<!-- / BARRE DE RECHERCHE -->
+

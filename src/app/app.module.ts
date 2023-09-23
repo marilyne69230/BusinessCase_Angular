@@ -11,6 +11,10 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { ScrollComponent } from './component/home/scroll/scroll.component';
+import { AccueilComponent } from './component/home/accueil/accueil.component';
+import { CarouselComponent } from './component/nft/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     EthComponent,
     NavbarComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    ScrollComponent,
+    AccueilComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

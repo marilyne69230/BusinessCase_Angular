@@ -1,12 +1,17 @@
-<h1 class="text-center m-5">Liste des Nfts</h1>
+<h1 class="text-center m-5">The Nft's place</h1>
 
-<div class="card-group">
+<app-carousel></app-carousel>
+
+<div class="card-group container">
 
     <div *ngFor="let nft of nftList">
-        <div class="card" style="width: 18rem;">
-            <img src="https://play-lh.googleusercontent.com/HZ16nsxrSsoJoZx0JDJjpmRN2KC0eZRSTyS2O-Lgjw7BgjTU6W8uDSYNj1IMlbqmtQ" class="card-img-top" alt="...">
+        <div class="card m-3" style="width: 18rem;">
+              <a class="navbar-brand" href="#">
+                <p>oijQO</p>
+              </a>
+            <img src="{{nft.pathImage}}" class="card-img-top p-3" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{nft.name}}</h5>
+              <h4 class="card-title text-center">{{nft.name}}</h4>
               <p class="card-text">Prix : {{nft.price}} ETH</p>
               <p class="card-text">{{nft.date}}</p>
               <a href="#" class="btn btn-primary">Acheter</a>
