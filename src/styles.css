@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Myfont";
+    src: url(assets/polices/static/MartianMono-Medium.ttf);
+}
 body {
-    background-color: rgba(0, 0, 0, 0.80)
+    background-color: rgba(0, 0, 0, 0.80);
+    font-family: 'Myfont';
 }

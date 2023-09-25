@@ -1,21 +1,37 @@
 <h1 class="text-center m-5">The Nft's place</h1>
 
+<!-- FILTRE -->
+<!-- [(ngModel)]="selectedCategory" (change)="filterByCategory(selectedCategory)" -->
+<!-- <div>
+  <label for="category">Filtre par catégorie : </label>
+  <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" >
+    <option value="">Toutes les catégories</option> -->
+    <!-- Remplacez 'categories' par la liste de vos catégories réelles -->
+    <!-- <option *ngFor="let category of categoryList">{{ category.label }}</option>
+  </select>
+</div> -->
+<!-- / FILTRE -->
+
 <app-carousel></app-carousel>
+
+
 
 <div class="card-group container">
 
     <div *ngFor="let nft of nftList">
         <div class="card m-3" style="width: 18rem;">
-              <a class="navbar-brand" href="#">
-                <p>oijQO</p>
-              </a>
-            <img src="{{nft.pathImage}}" class="card-img-top p-3" alt="...">
-            <div class="card-body">
-              <h4 class="card-title text-center">{{nft.name}}</h4>
-              <p class="card-text">Prix : {{nft.price}} ETH</p>
-              <p class="card-text">{{nft.date}}</p>
-              <a href="#" class="btn btn-primary">Acheter</a>
-            </div>
+          <img src="{{nft.pathImage}}" class="card-img-top p-3" alt="...">
+          <a class="navbar-brand text-center mt-2" href="#">
+            <img src="../../../assets/img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Nom propriétaire
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center py-2">{{nft.name}}</h5>
+            <p class="card-text">En ligne le :{{nft.date | date: 'dd/MM/yy à HH:mm'}}</p>
+            <a href="#" class="btn text">{{nft.price}} ETH</a>
           </div>
+        </div>
     </div>
 </div>
+
+

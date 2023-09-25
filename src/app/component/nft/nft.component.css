@@ -1,7 +1,18 @@
-h1, h4, p {
+h1, p {
     color: white;
 }
 .card {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
+img {
+    border-radius: 40px;
+}
+
+.btn {
+    background-color: yellow;
+}
+
+h5 {
+    background-color: yellow;
+}
