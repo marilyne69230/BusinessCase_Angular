@@ -12,10 +12,6 @@
 </div> -->
 <!-- / FILTRE -->
 
-<app-carousel></app-carousel>
-
-
-
 <div class="card-group container">
 
     <div *ngFor="let nft of nftList">
@@ -27,7 +23,7 @@
           </a>
           <div class="card-body">
             <h5 class="card-title text-center py-2">{{nft.name}}</h5>
-            <p class="card-text">En ligne le :{{nft.date | date: 'dd/MM/yy à HH:mm'}}</p>
+            <p class="card-text">En ligne le :{{nft.date}}</p>
             <a href="#" class="btn text">{{nft.price}} ETH</a>
           </div>
         </div>

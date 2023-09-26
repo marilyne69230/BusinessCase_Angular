@@ -23,6 +23,7 @@ export class NftComponent implements OnInit {
   ngOnInit(): void {
     this.nftService.getAllNfts().subscribe(data => {
       this.nftList = data;
+      console.log(data);
     })
     this.categoryService.getAllCategory().subscribe(data => {
       this.categoryList = data;
