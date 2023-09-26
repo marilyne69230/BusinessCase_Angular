@@ -15,7 +15,7 @@ import { AccueilComponent } from './component/home/accueil/accueil.component';
 import { CarouselComponent } from './component/home/carousel/carousel.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   declarations: [
