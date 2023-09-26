@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {FormControl, FormGroup} from "@angular/forms";
 
-import {AuthService} from "../auth.service";
+import { AuthService } from '../service/auth.service';
 import { LoginService } from '../service/login.service';
 import { Itoken } from '../interface/user.interface';
 

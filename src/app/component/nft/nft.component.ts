@@ -31,8 +31,9 @@ export class NftComponent implements OnInit {
     console.log(this.nftList);
   }
 
-  // onSelected(category:string){
+  // onSelected(category:string) {
   //   if(category == "Histoire"){
-  //     this.categoryList = this.nftList
+  //     return this.categoryList
   //   }
-  }
+  // }
+}

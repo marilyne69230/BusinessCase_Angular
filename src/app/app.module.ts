@@ -7,15 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { NftComponent } from './component/nft/nft.component';
 import { EthComponent } from './component/eth/eth.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { ScrollComponent } from './component/home/scroll/scroll.component';
 import { AccueilComponent } from './component/home/accueil/accueil.component';
 import { CarouselComponent } from './component/home/carousel/carousel.component';
-import { LogoutComponent } from './component/logout/logout.component';
 import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +23,14 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     NftComponent,
     EthComponent,
-    NavbarComponent,
     ContactComponent,
     UserComponent,
     ScrollComponent,
     AccueilComponent,
     CarouselComponent,
-    LogoutComponent,
     LoginComponent,
+    NavbarComponent,
+    RegisterComponent
   
   ],
   imports: [

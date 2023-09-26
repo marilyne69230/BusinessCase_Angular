@@ -2,14 +2,14 @@
 
 <!-- FILTRE -->
 <!-- [(ngModel)]="selectedCategory" (change)="filterByCategory(selectedCategory)" -->
-<!-- <div>
+<div>
   <label for="category">Filtre par catégorie : </label>
-  <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" >
-    <option value="">Toutes les catégories</option> -->
+  <!-- <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" > -->
+    <option value="">Toutes les catégories</option>
     <!-- Remplacez 'categories' par la liste de vos catégories réelles -->
-    <!-- <option *ngFor="let category of categoryList">{{ category.label }}</option>
-  </select>
-</div> -->
+    <option *ngFor="let category of categoryList">{{ category.label }}</option>
+  <!-- </select> -->
+</div>
 <!-- / FILTRE -->
 
 <div class="card-group container">
