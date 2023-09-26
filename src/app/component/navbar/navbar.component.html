@@ -25,7 +25,7 @@
           <a class="nav-link" routerLink="">Contact</a>
         </li>
         <li class="nav-item" *ngIf="checkIsLogged()">
-          <a class="nav-link" (click)="logout()">se déconnecter</a>
+          <a class="nav-link" (click)="logout()">Déconnexion</a>
         </li>
         <li class="nav-item" *ngIf="!checkIsLogged()">
           <a class="nav-link" routerLink="/login">Connexion</a>
