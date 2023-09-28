@@ -13,4 +13,8 @@ export class CategoryService {
   getAllCategory(): Observable<CategoryInterface[]> {
     return this.http.get<CategoryInterface[]>('https://127.0.0.1:8000/api/category/')
   }
+
+  getOneCategory(id:number): Observable<CategoryInterface> {
+    return this.http.get<CategoryInterface>('https://127.0.0.1:8000/api/category/' + id)
+  }
 }

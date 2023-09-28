@@ -3,8 +3,8 @@ export interface UserInterface {
     email: string;
     firstName: string;
     lastName: string;
-    gender: string;
-    birth: string;
+    // gender: string;
+    // birth: string;
 }
 
 export interface Icredentials{

@@ -9,13 +9,14 @@ import { NftComponent } from './component/nft/nft.component';
 import { EthComponent } from './component/eth/eth.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './component/user/user.component';
 import { ScrollComponent } from './component/home/scroll/scroll.component';
 import { AccueilComponent } from './component/home/accueil/accueil.component';
 import { CarouselComponent } from './component/home/carousel/carousel.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { RegisterComponent } from './component/register/register.component';
+import { NewNftComponent } from './component/nft/new-nft/new-nft.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegisterComponent } from './component/register/register.component';
     CarouselComponent,
     LoginComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewNftComponent
   
   ],
   imports: [

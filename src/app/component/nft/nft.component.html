@@ -2,32 +2,53 @@
 
 <!-- FILTRE -->
 <!-- [(ngModel)]="selectedCategory" (change)="filterByCategory(selectedCategory)" -->
-<div>
-  <label for="category">Filtre par catégorie : </label>
-  <!-- <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" > -->
-    <option value="">Toutes les catégories</option>
+<!-- <div> -->
+  <!-- <label for="category">Filtre par catégorie : </label>
+  <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" >
+    <option value="">Toutes les catégories</option> -->
     <!-- Remplacez 'categories' par la liste de vos catégories réelles -->
+    <!-- <option *ngFor="let category of categoryList">{{ category.label }}</option>
+  </select> -->
+<!-- </div> -->
+<!-- / FILTRE -->
+
+<!-- FILTRE -->
+<div class="dropdown d-flex justify-content-center m-2">
+  <select (change)="onChange($event)">
+    <option default>Toutes les catégories</option>
     <option *ngFor="let category of categoryList">{{ category.label }}</option>
-  <!-- </select> -->
+  </select>
+  <button (click)="afficheDonnes()">Afficher</button>
 </div>
 <!-- / FILTRE -->
 
+<!-- CARD -->
 <div class="card-group container">
-
     <div *ngFor="let nft of nftList">
         <div class="card m-3" style="width: 18rem;">
-          <img src="{{nft.pathImage}}" class="card-img-top p-3" alt="...">
-          <a class="navbar-brand text-center mt-2" href="#">
-            <img src="../../../assets/img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            Nom propriétaire
-          </a>
+          <div>
+            <!-- BOUTON LIKE -->
+            <a (click)="onAddLike(nft.id)" class="btn like text-white" style="background-color: black" role="button">
+              <img src="../../../assets/img/coeur.png" alt="" class="nft">
+              <span class="badge ms-2">{{nft.likeNft}}</span>
+            </a>
+            <!-- BOUTON LIKE -->
+            <img src="{{nft.pathImage}}" class="card-img-top p-3" alt="...">
+          </div>
+ 
           <div class="card-body">
-            <h5 class="card-title text-center py-2">{{nft.name}}</h5>
-            <p class="card-text">En ligne le :{{nft.date}}</p>
+            <h5 class="card-title text-center">{{nft.name}}</h5>
+            
+            <a class="navbar-brand text-center" href="#">
+              <img src="../../../assets/img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+              Nom propriétaire
+            </a>
+            <p class="card-text">Crée le:{{nft.date | date: 'dd/MM/yy, à HH:mm' }}</p>
             <a href="#" class="btn text">{{nft.price}} ETH</a>
           </div>
         </div>
     </div>
 </div>
+<!-- / CARD -->
 
 

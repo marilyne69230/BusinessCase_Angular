@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EthComponent } from './component/eth/eth.component';
 import { NftComponent } from './component/nft/nft.component';
 import { HomeComponent } from './component/home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 
 const routes: Routes = [

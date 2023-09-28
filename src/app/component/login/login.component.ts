@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 
 import {FormControl, FormGroup} from "@angular/forms";
 
-import { AuthService } from '../service/auth.service';
-import { LoginService } from '../service/login.service';
-import { Itoken } from '../interface/user.interface';
+import { AuthService } from '../../service/auth.service';
+import { LoginService } from '../../service/login.service';
+import { Itoken } from '../../interface/user.interface';
 
 @Component({
   selector: 'app-login',

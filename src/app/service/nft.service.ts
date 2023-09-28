@@ -13,4 +13,13 @@ export class NftService {
   getAllNfts(): Observable<NftInterface[]> {
     return this.http.get<NftInterface[]>('https://127.0.0.1:8000/api/nft/')
   }
+
+  getOneNft(id:number): Observable<NftInterface> {
+    return this.http.get<NftInterface>('https://127.0.0.1:8000/api/nft/' + id)
+  }
+
+  likeNft(id:number): Observable<NftInterface> {
+    return this.http.get<NftInterface>('https://127.0.0.1:8000/api/nft/' + id + '/like')
+  }
+
 }
