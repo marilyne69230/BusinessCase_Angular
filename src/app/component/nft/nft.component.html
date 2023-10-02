@@ -1,18 +1,6 @@
 <h1 class="text-center m-5">The Nft's place</h1>
 
 <!-- FILTRE -->
-<!-- [(ngModel)]="selectedCategory" (change)="filterByCategory(selectedCategory)" -->
-<!-- <div> -->
-  <!-- <label for="category">Filtre par catégorie : </label>
-  <select id="category" #category [(ngModel)]="categoryList" (change)="onSelected(category.value)" >
-    <option value="">Toutes les catégories</option> -->
-    <!-- Remplacez 'categories' par la liste de vos catégories réelles -->
-    <!-- <option *ngFor="let category of categoryList">{{ category.label }}</option>
-  </select> -->
-<!-- </div> -->
-<!-- / FILTRE -->
-
-<!-- FILTRE -->
 <div class="dropdown d-flex justify-content-center m-2">
   <select (change)="onChange($event)">
     <option default>Toutes les catégories</option>
@@ -25,10 +13,12 @@
 <!-- CARD -->
 <div class="card-group container">
     <div *ngFor="let nft of nftList">
+      {{ transform(nft.user) }}
         <div class="card m-3" style="width: 18rem;">
           <div>
             <!-- BOUTON LIKE -->
-            <a (click)="onAddLike(nft.id)" class="btn like text-white" style="background-color: black" role="button">
+            <!-- quand je clique sur le bouton, ca declenche la fonction au click qui ajoute un like -->
+            <a (click)="onAddLike(nft.id)" class="btn like text-white" [ngClass]="{'liked': isLiked}" style="background-color: black" role="button">
               <img src="../../../assets/img/coeur.png" alt="" class="nft">
               <span class="badge ms-2">{{nft.likeNft}}</span>
             </a>
@@ -39,11 +29,12 @@
           <div class="card-body">
             <h5 class="card-title text-center">{{nft.name}}</h5>
             
-            <a class="navbar-brand text-center" href="#">
-              <img src="../../../assets/img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              Nom propriétaire
-            </a>
-            <p class="card-text">Crée le:{{nft.date | date: 'dd/MM/yy, à HH:mm' }}</p>
+
+              <a class="navbar-brand text-center" href="#">
+                {{ nft.user }}
+                <img src="../../../assets/img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+              </a>
+            <p class="card-text">Crée le: {{nft.date | date: 'd MMMM yyyy, à HH:mm' }}</p>
             <a href="#" class="btn text">{{nft.price}} ETH</a>
           </div>
         </div>

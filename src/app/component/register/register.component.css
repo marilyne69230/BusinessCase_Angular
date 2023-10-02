@@ -1,3 +1,26 @@
+.card {
+    background-color: rgba(0, 0, 0, .1  );
+}
+
+
+
+input{
+    background-color: white;
+}
+
 label {
     color: white;
+}
+
+h2 {
+    color: yellow;
+}
+
+.block1 {
+    background-image: url("https://i.pinimg.com/564x/32/7a/c9/327ac9f469892d6c8b0a6a153ca55b13.jpg");
+    background-repeat: no-repeat;
+}
+
+.btn {
+    background-color: yellow;
 }

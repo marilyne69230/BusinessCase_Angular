@@ -3,8 +3,11 @@ export interface UserInterface {
     email: string;
     firstName: string;
     lastName: string;
-    // gender: string;
-    // birth: string;
+    gender: string;
+    birth: string;
+    label: string;
+    postalCode: string;
+    country: string;
 }
 
 export interface Icredentials{
